@@ -3,24 +3,24 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     
-    <title>pm2 | Blog</title>
+    <title>python虚拟环境 Virtualenv及Virtualenvwrapper | Blog</title>
     
     
-        <meta name="keywords" content="Node,Hexo,pm2">
+        <meta name="keywords" content="Python,Virtualenv,Virtualenvwrapper">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="run.js12345678910//runconst &amp;#123; exec &amp;#125; = require(&amp;apos;child_process&amp;apos;)exec(&amp;apos;hexo server -i 0.0.0.0 -p 8020 -d&amp;apos;,(error, stdout, stderr) =&amp;gt; &amp;#123;        if(error)&amp;#123;">
-<meta name="keywords" content="Node,Hexo,pm2">
+    <meta name="description" content="虚拟环境虚拟环境原理介绍： 虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。比如我们现在有一个项目是基于Django 1.10.x版本，又有一个项目是基于Django 0.9.x的版本，那么这时候就可以创建两个虚拟环境，在这两个虚拟环境中分别安装Django 1.10.x和Django 0.9.x来适配我们的项目。">
+<meta name="keywords" content="Python,Virtualenv,Virtualenvwrapper">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pm2">
-<meta property="og:url" content="https://dxx.fun/20181102/pm2/index.html">
+<meta property="og:title" content="python虚拟环境 Virtualenv及Virtualenvwrapper">
+<meta property="og:url" content="https://dxx.fun/20181102/python虚拟环境-Virtualenv及Virtualenvwrapper/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="run.js12345678910//runconst &amp;#123; exec &amp;#125; = require(&amp;apos;child_process&amp;apos;)exec(&amp;apos;hexo server -i 0.0.0.0 -p 8020 -d&amp;apos;,(error, stdout, stderr) =&amp;gt; &amp;#123;        if(error)&amp;#123;">
+<meta property="og:description" content="虚拟环境虚拟环境原理介绍： 虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。比如我们现在有一个项目是基于Django 1.10.x版本，又有一个项目是基于Django 0.9.x的版本，那么这时候就可以创建两个虚拟环境，在这两个虚拟环境中分别安装Django 1.10.x和Django 0.9.x来适配我们的项目。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-02T11:34:28.122Z">
+<meta property="og:updated_time" content="2018-11-02T11:39:26.676Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pm2">
-<meta name="twitter:description" content="run.js12345678910//runconst &amp;#123; exec &amp;#125; = require(&amp;apos;child_process&amp;apos;)exec(&amp;apos;hexo server -i 0.0.0.0 -p 8020 -d&amp;apos;,(error, stdout, stderr) =&amp;gt; &amp;#123;        if(error)&amp;#123;">
+<meta name="twitter:title" content="python虚拟环境 Virtualenv及Virtualenvwrapper">
+<meta name="twitter:description" content="虚拟环境虚拟环境原理介绍： 虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。比如我们现在有一个项目是基于Django 1.10.x版本，又有一个项目是基于Django 0.9.x的版本，那么这时候就可以创建两个虚拟环境，在这两个虚拟环境中分别安装Django 1.10.x和Django 0.9.x来适配我们的项目。">
     
 
     
@@ -164,13 +164,13 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/Django-2-0-静态文件404解决方法/">Django 2.0 静态文件404解决方法</a></li>  <li class="file"><a href="/20181102/Django2-0-配置静态文件路由，验证网站所有权/">Django2.0 配置静态文件路由，验证网站所有权</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             Python
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/Python-基础-数据类型-字符串类型与操作/">Python 基础 - 数据类型 - 字符串类型与操作</a></li>  <li class="file"><a href="/20181102/python虚拟环境-Virtualenv及Virtualenvwrapper/">python虚拟环境 Virtualenv及Virtualenvwrapper</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/Python-基础-数据类型-字符串类型与操作/">Python 基础 - 数据类型 - 字符串类型与操作</a></li>  <li class="file active"><a href="/20181102/python虚拟环境-Virtualenv及Virtualenvwrapper/">python虚拟环境 Virtualenv及Virtualenvwrapper</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -182,13 +182,13 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/ubuntu-16-04-python-3-x-安装OpenSSL/">ubuntu 16.04 python 3.x 安装OpenSSL</a></li>  <li class="file"><a href="/20181102/ubuntu-16-04-配置Rime输入法（中州韵）/">ubuntu 16.04 配置Rime输入法（中州韵）</a></li>  <li class="file"><a href="/20181102/ubuntu安装node-vue/">ubuntu安装node vue</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             前端
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/hexo-admin-deploy/">hexo-admin deploy</a></li>  <li class="file active"><a href="/20181102/pm2/">pm2</a></li>  <li class="file"><a href="/20181102/CSS选择器-匹配H标签/">CSS选择器 匹配H标签</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/hexo-admin-deploy/">hexo-admin deploy</a></li>  <li class="file"><a href="/20181102/pm2/">pm2</a></li>  <li class="file"><a href="/20181102/CSS选择器-匹配H标签/">CSS选择器 匹配H标签</a></li>  </ul> 
                     </li> 
                      <li class="file"><a href="/20181102/hello-world/">Hello World</a></li>  </ul> 
     </div>
@@ -270,7 +270,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-pm2" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <section id="main"><article id="post-python虚拟环境-Virtualenv及Virtualenvwrapper" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -280,20 +280,20 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/前端/">前端</a>
+        <a class="article-category-link" href="/categories/Python/">Python</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Hexo/">Hexo</a>, <a class="tag-link" href="/tags/Node/">Node</a>, <a class="tag-link" href="/tags/pm2/">pm2</a>
+        <a class="tag-link" href="/tags/Python/">Python</a>, <a class="tag-link" href="/tags/Virtualenv/">Virtualenv</a>, <a class="tag-link" href="/tags/Virtualenvwrapper/">Virtualenvwrapper</a>
     </div>
 
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/20181102/pm2/">
-            <time datetime="2018-11-02T11:16:00.000Z" itemprop="datePublished">2018-11-02</time>
+        <a href="/20181102/python虚拟环境-Virtualenv及Virtualenvwrapper/">
+            <time datetime="2018-11-02T11:27:00.000Z" itemprop="datePublished">2018-11-02</time>
         </a>
     </div>
 
@@ -301,13 +301,13 @@
                         
                         
                             <div class="article-meta-button">
-                                <a href="https://github.com/pjpv/pjpv.github.io/raw/master/source/_posts/pm2.md"> Source </a>
+                                <a href="https://github.com/pjpv/pjpv.github.io/raw/master/source/_posts/python虚拟环境-Virtualenv及Virtualenvwrapper.md"> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/pjpv/pjpv.github.io/edit/master/source/_posts/pm2.md"> Edit </a>
+                                <a href="https://github.com/pjpv/pjpv.github.io/edit/master/source/_posts/python虚拟环境-Virtualenv及Virtualenvwrapper.md"> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/pjpv/pjpv.github.io/commits/master/source/_posts/pm2.md"> History </a>
+                                <a href="https://github.com/pjpv/pjpv.github.io/commits/master/source/_posts/python虚拟环境-Virtualenv及Virtualenvwrapper.md"> History </a>
                             </div>
                         
                     </div>
@@ -315,7 +315,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            pm2
+            python虚拟环境 Virtualenv及Virtualenvwrapper
         </h1>
     
 
@@ -328,11 +328,43 @@
             
         
         
-            <h3 id="run-js"><a href="#run-js" class="headerlink" title="run.js"></a>run.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//run</span><br><span class="line">const &#123; exec &#125; = require(&apos;child_process&apos;)</span><br><span class="line">exec(&apos;hexo server -i 0.0.0.0 -p 8020 -d&apos;,(error, stdout, stderr) =&gt; &#123;</span><br><span class="line">        if(error)&#123;</span><br><span class="line">                console.log(&apos;exec error: $&#123;error&#125;&apos;)</span><br><span class="line">                return</span><br><span class="line">        &#125;</span><br><span class="line">        console.log(&apos;stdout: $&#123;stdout&#125;&apos;);</span><br><span class="line">        console.log(&apos;stderr: $&#123;stderr&#125;&apos;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://blog.csdn.net/tangcuyuha/article/details/80331169" target="_blank" rel="noopener">source</a></li>
-</ul>
-
+            <h1 id="虚拟环境"><a href="#虚拟环境" class="headerlink" title="虚拟环境"></a>虚拟环境</h1><h2 id="虚拟环境原理介绍："><a href="#虚拟环境原理介绍：" class="headerlink" title="虚拟环境原理介绍："></a>虚拟环境原理介绍：</h2><blockquote>
+<p>虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。比如我们现在有一个项目是基于Django 1.10.x版本，又有一个项目是基于Django 0.9.x的版本，那么这时候就可以创建两个虚拟环境，在这两个虚拟环境中分别安装Django 1.10.x和Django 0.9.x来适配我们的项目。</p>
+</blockquote>
+<h2 id="virtualenv"><a href="#virtualenv" class="headerlink" title="virtualenv"></a>virtualenv</h2><h3 id="安装virtualenv："><a href="#安装virtualenv：" class="headerlink" title="安装virtualenv："></a>安装virtualenv：</h3><p>virtualenv是用来创建虚拟环境的软件工具，我们可以通过pip或者pip3来安装：</p>
+<pre><code>pip install virtualenv
+pip3 install virtualenv
+</code></pre><h3 id="创建虚拟环境："><a href="#创建虚拟环境：" class="headerlink" title="创建虚拟环境："></a>创建虚拟环境：</h3><p>创建虚拟环境非常简单，通过以下命令就可以创建了：</p>
+<pre><code>virtualenv [虚拟环境的名字]
+</code></pre><p>如果你当前的Python3/Scripts的查找路径在Python2/Scripts的前面，那么将会使用python3作为这个虚拟环境的解释器。<br>如果python2/Scripts在python3/Scripts前面，那么将会使用Python2来作为这个虚拟环境的解释器。</p>
+<h3 id="进入环境："><a href="#进入环境：" class="headerlink" title="进入环境："></a>进入环境：</h3><p>虚拟环境创建好了以后，那么可以进入到这个虚拟环境中，然后安装一些第三方包，进入虚拟环境在不同的操作系统中有不同的方式，一般分为两种，第一种是Windows，第二种是*nix：</p>
+<h4 id="windows进入虚拟环境："><a href="#windows进入虚拟环境：" class="headerlink" title="windows进入虚拟环境："></a>windows进入虚拟环境：</h4><p>进入到虚拟环境的Scripts文件夹中，然后执行activate。</p>
+<h4 id="nix进入虚拟环境："><a href="#nix进入虚拟环境：" class="headerlink" title="*nix进入虚拟环境："></a>*nix进入虚拟环境：</h4><pre><code>source /path/to/virtualenv/bin/activate 
+</code></pre><p>一旦你进入到了这个虚拟环境中，你安装包，卸载包都是在这个虚拟环境中，不会影响到外面的环境。</p>
+<h3 id="退出虚拟环境："><a href="#退出虚拟环境：" class="headerlink" title="退出虚拟环境："></a>退出虚拟环境：</h3><p>退出虚拟环境很简单，通过一个命令就可以完成：</p>
+<pre><code>deactivate
+</code></pre><h3 id="创建虚拟环境的时候指定Python解释器："><a href="#创建虚拟环境的时候指定Python解释器：" class="headerlink" title="创建虚拟环境的时候指定Python解释器："></a>创建虚拟环境的时候指定Python解释器：</h3><p>在电脑的环境变量中，一般是不会去更改一些环境变量的顺序的。<br>也就是说比如你的Python2/Scripts在Python3/Scripts的前面，那么你不会经常去更改他们的位置。<br>但是这时候我确实是想在创建虚拟环境的时候用Python3这个版本，这时候可以通过-p参数来指定具体的Python解释器：</p>
+<pre><code>virtualenv -p C:\Python36\python.exe [virutalenv name]
+</code></pre><h2 id="virtualenvwrapper："><a href="#virtualenvwrapper：" class="headerlink" title="virtualenvwrapper："></a>virtualenvwrapper：</h2><blockquote>
+<p>virtualenvwrapper这个软件包可以让我们管理虚拟环境变得更加简单。<br>不用再跑到某个目录下通过virtualenv来创建虚拟环境，并且激活的时候也要跑到具体的目录下去激活。</p>
+</blockquote>
+<h3 id="安装virtualenvwrapper："><a href="#安装virtualenvwrapper：" class="headerlink" title="安装virtualenvwrapper："></a>安装virtualenvwrapper：</h3><h4 id="nix："><a href="#nix：" class="headerlink" title="*nix："></a>*nix：</h4><pre><code>pip install virtualenvwrapper
+</code></pre><h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4><pre><code>pip install virtualenvwrapper-win
+</code></pre><h3 id="virtualenvwrapper基本使用："><a href="#virtualenvwrapper基本使用：" class="headerlink" title="virtualenvwrapper基本使用："></a>virtualenvwrapper基本使用：</h3><h4 id="创建虚拟环境：-1"><a href="#创建虚拟环境：-1" class="headerlink" title="创建虚拟环境："></a>创建虚拟环境：</h4><pre><code>mkvirtualenv my_env
+</code></pre><p>那么会在你当前用户下创建一个Env的文件夹，然后将这个虚拟环境安装到这个目录下。<br>如果你电脑中安装了python2和python3，并且两个版本中都安装了virtualenvwrapper，那么将会使用环境变量中第一个出现的Python版本来作为这个虚拟环境的Python解释器。</p>
+<h4 id="切换到某个虚拟环境："><a href="#切换到某个虚拟环境：" class="headerlink" title="切换到某个虚拟环境："></a>切换到某个虚拟环境：</h4><pre><code>workon my_env
+</code></pre><h4 id="退出当前虚拟环境："><a href="#退出当前虚拟环境：" class="headerlink" title="退出当前虚拟环境："></a>退出当前虚拟环境：</h4><pre><code>deactivate
+</code></pre><h4 id="删除某个虚拟环境："><a href="#删除某个虚拟环境：" class="headerlink" title="删除某个虚拟环境："></a>删除某个虚拟环境：</h4><pre><code>rmvirtualenv my_env
+</code></pre><h4 id="列出所有虚拟环境："><a href="#列出所有虚拟环境：" class="headerlink" title="列出所有虚拟环境："></a>列出所有虚拟环境：</h4><pre><code>lsvirtualenv
+</code></pre><h4 id="进入到虚拟环境所在的目录："><a href="#进入到虚拟环境所在的目录：" class="headerlink" title="进入到虚拟环境所在的目录："></a>进入到虚拟环境所在的目录：</h4><pre><code>cd virtualenv
+</code></pre><h4 id="修改mkvirtualenv的默认路径："><a href="#修改mkvirtualenv的默认路径：" class="headerlink" title="修改mkvirtualenv的默认路径："></a>修改mkvirtualenv的默认路径：</h4><p>在我的电脑-&gt;右键-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;系统变量中添加一个参数WORKON_HOME，将这个参数的值设置为你需要的路径。</p>
+<h4 id="创建虚拟环境的时候指定Python版本："><a href="#创建虚拟环境的时候指定Python版本：" class="headerlink" title="创建虚拟环境的时候指定Python版本："></a>创建虚拟环境的时候指定Python版本：</h4><p>在使用mkvirtualenv的时候，可以指定–python的参数来指定具体的python路径：</p>
+<pre><code>mkvirtualenv --python==C:\Python36\python.exe hy_env
+</code></pre><blockquote>
+<p><a href="https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html" target="_blank" rel="noopener">virtualenvwrapper 命令的完全列表</a></p>
+</blockquote>
+<p>参考：<a href="http://pythonguidecn.readthedocs.io/zh/latest/dev/virtualenvs.html" target="_blank" rel="noopener">http://pythonguidecn.readthedocs.io/zh/latest/dev/virtualenvs.html</a></p>
+<h3 id="End"><a href="#End" class="headerlink" title="End"></a>End</h3><h4 id="AD"><a href="#AD" class="headerlink" title="AD"></a>AD</h4>
             </div>
         
         <footer class="article-footer">
@@ -344,19 +376,19 @@
     
 <nav id="article-nav">
     
-        <a href="/20181102/python虚拟环境-Virtualenv及Virtualenvwrapper/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/20181102/Django-2-0-静态文件404解决方法/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">上一篇</strong>
             <div class="article-nav-title">
                 
-                    python虚拟环境 Virtualenv及Virtualenvwrapper
+                    Django 2.0 静态文件404解决方法
                 
             </div>
         </a>
     
     
-        <a href="/20181102/hexo-admin-deploy/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/20181102/pm2/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">hexo-admin deploy</div>
+            <div class="article-nav-title">pm2</div>
         </a>
     
 </nav>
