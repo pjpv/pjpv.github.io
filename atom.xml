@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dxx.fun/"/>
-  <updated>2018-11-02T08:27:02.487Z</updated>
+  <updated>2018-11-02T11:13:32.405Z</updated>
   <id>https://dxx.fun/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-admin deploy</title>
+    <link href="https://dxx.fun/20181102/hexo-admin-deploy/"/>
+    <id>https://dxx.fun/20181102/hexo-admin-deploy/</id>
+    <published>2018-11-02T11:09:51.000Z</published>
+    <updated>2018-11-02T11:13:32.405Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1. _config.yml"></a>1. <code>_config.yml</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">admin:</span><br><span class="line">  deployCommand: &apos;sh hexo-deploy.sh&apos;</span><br></pre></td></tr></table></figure><h3 id="2-hexo-deploy-sh"><a href="#2-hexo-deploy-sh" class="headerlink" title="2. hexo-deploy.sh"></a>2. <code>hexo-deploy.sh</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure><h3 id="3-blog-node-modules-hexo-admin-deploy-js"><a href="#3-blog-node-modules-hexo-admin-deploy-js" class="headerlink" title="3. blog\node_modules\hexo-admin\deploy.js"></a>3. <code>blog\node_modules\hexo-admin\deploy.js</code></h3><ul><li><p>old</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var proc = spawn(command, [message], &#123;detached: true&#125;);</span><br></pre></td></tr></table></figure></li><li><p>new</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var proc = spawn((process.platform === &quot;win32&quot; ? &quot;hexo.cmd&quot; : &quot;hexo&quot;), [&apos;d&apos;, &apos;-g&apos;]);</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-config-yml&quot;&gt;&lt;a href=&quot;#1-config-yml&quot; class=&quot;headerlink&quot; title=&quot;1. _config.yml&quot;&gt;&lt;/a&gt;1. &lt;code&gt;_config.yml&lt;/code&gt;&lt;/h3&gt;&lt;figure class=&quot;h
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
