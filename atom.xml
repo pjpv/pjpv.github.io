@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dxx.fun/"/>
-  <updated>2018-11-02T10:22:10.860Z</updated>
+  <updated>2018-11-02T08:27:02.487Z</updated>
   <id>https://dxx.fun/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>aaaa</title>
-    <link href="https://dxx.fun/20181102/aaaa/"/>
-    <id>https://dxx.fun/20181102/aaaa/</id>
-    <published>2018-11-02T10:22:10.000Z</published>
-    <updated>2018-11-02T10:22:10.860Z</updated>
-    
-    <content type="html"><![CDATA[<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>a<br>a<br>a<br>a</p><p>a<br>a<br>a</p><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&lt;br&gt;a&lt;br&gt;a&lt;br&gt;a&lt;br&gt;a&lt;/p&gt;
-&lt;p&gt;a&lt;br&gt;a&lt;br&gt;a&lt;/p&gt;
-&lt;h1 id=&quot;2&quot;&gt;&lt;a href=&quot;#2&quot; class=&quot;headerlink&quot; title=&quot;2&quot;&gt;&lt;/a&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
