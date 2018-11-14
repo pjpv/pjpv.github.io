@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>PHP - 基础 - 引用变量 | Blog</title>
+    
+    
+        <meta name="keywords" content="PHP,基础,引用变量">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="PHP的引用变量的概念及定义方式概念在PHP中引用意味着用不同的名字访问同一个变量内容. 定义方式 使用 &amp;amp; 符号  PHP引用变量的原理工作原理 定义变量  Code  12345678910111213&amp;lt;?php    // 1.定义一个变量 (内存地址1)    $a = range(0, 1000);       // 2.定义变量b, 将a变量的值赋值给b (内存地址1)">
+<meta name="keywords" content="PHP,基础,引用变量">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP - 基础 - 引用变量">
+<meta property="og:url" content="https://dxx.fun/20181114/PHP-基础-引用变量/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="PHP的引用变量的概念及定义方式概念在PHP中引用意味着用不同的名字访问同一个变量内容. 定义方式 使用 &amp;amp; 符号  PHP引用变量的原理工作原理 定义变量  Code  12345678910111213&amp;lt;?php    // 1.定义一个变量 (内存地址1)    $a = range(0, 1000);       // 2.定义变量b, 将a变量的值赋值给b (内存地址1)">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/6260f60dgy1fx7gl7pxtsj20no0jltd1.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/6260f60dgy1fx7gp8prgcj20jh0i7wgj.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/6260f60dgy1fx7gxt3mm8j20jb0hkgnn.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/6260f60dgy1fx7h0wwq0oj20sy0hg0vo.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/6260f60dgy1fx7hbimr9ij20js0i2di4.jpg">
+<meta property="og:updated_time" content="2018-11-14T04:57:56.911Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP - 基础 - 引用变量">
+<meta name="twitter:description" content="PHP的引用变量的概念及定义方式概念在PHP中引用意味着用不同的名字访问同一个变量内容. 定义方式 使用 &amp;amp; 符号  PHP引用变量的原理工作原理 定义变量  Code  12345678910111213&amp;lt;?php    // 1.定义一个变量 (内存地址1)    $a = range(0, 1000);       // 2.定义变量b, 将a变量的值赋值给b (内存地址1)">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/6260f60dgy1fx7gl7pxtsj20no0jltd1.jpg">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                
+                <span class="site-title">Blog</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Django
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/Django-2-0-静态文件404解决方法/">Django 2.0 静态文件404解决方法</a></li>  <li class="file"><a href="/20181102/Django2-0-配置静态文件路由，验证网站所有权/">Django2.0 配置静态文件路由，验证网站所有权</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            PHP
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            基础
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181114/PHP-基础-常量及数据类型/">PHP - 基础 - 常量及数据类型</a></li>  <li class="file active"><a href="/20181114/PHP-基础-引用变量/">PHP - 基础 - 引用变量</a></li>  <li class="file"><a href="/20181114/PHP-基础-流程控制/">PHP - 基础 - 流程控制</a></li>  <li class="file"><a href="/20181114/PHP-基础-运算符/">PHP - 基础 - 运算符</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Python
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/python虚拟环境-Virtualenv及Virtualenvwrapper/">python虚拟环境 Virtualenv及Virtualenvwrapper</a></li>  <li class="file"><a href="/20181102/Python-基础-数据类型-字符串类型与操作/">Python 基础 - 数据类型 - 字符串类型与操作</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Ubuntu
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/ubuntu安装node-vue/">ubuntu安装node vue</a></li>  <li class="file"><a href="/20181102/ubuntu-16-04-python-3-x-安装OpenSSL/">ubuntu 16.04 python 3.x 安装OpenSSL</a></li>  <li class="file"><a href="/20181102/ubuntu-16-04-配置Rime输入法（中州韵）/">ubuntu 16.04 配置Rime输入法（中州韵）</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            前端
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/hexo-admin-deploy/">hexo-admin deploy</a></li>  <li class="file"><a href="/20181102/pm2/">pm2</a></li>  <li class="file"><a href="/20181102/CSS选择器-匹配H标签/">CSS选择器 匹配H标签</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/20181102/hello-world/">Hello World</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-PHP-基础-引用变量" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/PHP/">PHP</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/PHP/基础/">基础</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/PHP/">PHP</a>, <a class="tag-link" href="/tags/基础/">基础</a>, <a class="tag-link" href="/tags/引用变量/">引用变量</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/20181114/PHP-基础-引用变量/">
+            <time datetime="2018-11-14T03:28:00.000Z" itemprop="datePublished">2018-11-14</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            PHP - 基础 - 引用变量
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h2 id="PHP的引用变量的概念及定义方式"><a href="#PHP的引用变量的概念及定义方式" class="headerlink" title="PHP的引用变量的概念及定义方式"></a>PHP的引用变量的概念及定义方式</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>在PHP中引用意味着用不同的名字访问同一个变量内容.</p>
+<h3 id="定义方式"><a href="#定义方式" class="headerlink" title="定义方式"></a>定义方式</h3><blockquote>
+<p>使用 &amp; 符号</p>
+</blockquote>
+<h2 id="PHP引用变量的原理"><a href="#PHP引用变量的原理" class="headerlink" title="PHP引用变量的原理"></a>PHP引用变量的原理</h2><h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><ul>
+<li><p>定义变量</p>
+<ul>
+<li>Code</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1.定义一个变量 (内存地址1)</span></span><br><span class="line">    $a = range(<span class="number">0</span>, <span class="number">1000</span>);</span><br><span class="line">   </span><br><span class="line">    <span class="comment">// 2.定义变量b, 将a变量的值赋值给b (内存地址1)</span></span><br><span class="line">    <span class="comment">// COW: Copy On Write</span></span><br><span class="line">    $b = $a;</span><br><span class="line">  </span><br><span class="line">    <span class="comment">// -------------------</span></span><br><span class="line">    <span class="comment">// $a, $b 指向同一内存空间</span></span><br><span class="line">    <span class="comment">// -------------------</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>图示<br><img src="https://ws1.sinaimg.cn/large/6260f60dgy1fx7gl7pxtsj20no0jltd1.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>修改变量</p>
+<ul>
+<li><p>Code</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">&lt;?php</span></span><br><span class="line">        <span class="comment">// 3.修改变量, (内存地址2)</span></span><br><span class="line">        $a = range(<span class="number">0</span>, <span class="number">1000</span>);</span><br><span class="line">    </span><br><span class="line">        <span class="comment">// -------------------</span></span><br><span class="line">        <span class="comment">// $a -&gt; (内存地址2)</span></span><br><span class="line">        <span class="comment">// $b -&gt; (内存地址1)</span></span><br><span class="line">        <span class="comment">// -------------------</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>图示<br><img src="https://ws1.sinaimg.cn/large/6260f60dgy1fx7gp8prgcj20jh0i7wgj.jpg" alt=""> </p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>引用变量</p>
+<ul>
+<li><p>Code</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="comment">// 1.定义一个变量 (内存地址1)</span></span><br><span class="line">    $a = range(<span class="number">0</span>, <span class="number">1000</span>);</span><br><span class="line">    <span class="comment">// 2.引用变量, $b指向$a的内存地址</span></span><br><span class="line">    $b = &amp;$a;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// -------------------</span></span><br><span class="line">    <span class="comment">// $a -&gt; (内存地址2)</span></span><br><span class="line">    <span class="comment">// $b -&gt; (内存地址2)</span></span><br><span class="line">    <span class="comment">// -------------------</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>图示<br><img src="https://ws1.sinaimg.cn/large/6260f60dgy1fx7gxt3mm8j20jb0hkgnn.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>引用变量</p>
+<ul>
+<li><p>Code</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;?php</span></span><br><span class="line">     <span class="comment">// 4.修改变量, (内存地址2的内容被修改)</span></span><br><span class="line">     $a = range(<span class="number">0</span>, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">     <span class="comment">// -------------------</span></span><br><span class="line">     <span class="comment">// $a -&gt; (内存地址2)</span></span><br><span class="line">     <span class="comment">// $b -&gt; (内存地址2)</span></span><br><span class="line">     <span class="comment">// -------------------</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>图示<br><img src="https://ws1.sinaimg.cn/large/6260f60dgy1fx7h0wwq0oj20sy0hg0vo.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="unset"><a href="#unset" class="headerlink" title="unset"></a>unset</h3><blockquote>
+<p>unset 只会取消引用, 不会销毁空间</p>
+</blockquote>
+<ul>
+<li><p>unset</p>
+<ul>
+<li><p>Code</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;?php</span></span><br><span class="line">     <span class="comment">// 定义变量, ($a内存地址1)</span></span><br><span class="line">     $a = <span class="number">1</span>;</span><br><span class="line">     <span class="comment">// 引用变量, ($b内存地址1)</span></span><br><span class="line">     $b = &amp;$a;</span><br><span class="line">     <span class="comment">// 取消引用</span></span><br><span class="line">     <span class="keyword">unset</span>($b);</span><br><span class="line">     </span><br><span class="line">     <span class="comment">// -------------------</span></span><br><span class="line">     <span class="comment">// $a -&gt; (内存地址1)</span></span><br><span class="line">     <span class="comment">// $b -&gt; NULL</span></span><br><span class="line">     <span class="comment">// -------------------</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>图示<br><img src="https://ws1.sinaimg.cn/large/6260f60dgy1fx7hbimr9ij20js0i2di4.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><blockquote>
+<p>修改对象属性时, 只会对修改的属性进行赋值, 不会将整个对象复制. </p>
+</blockquote>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
+<p>写出如下程序的输出结果<br>  <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    $data = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line">    <span class="keyword">foreach</span>($data <span class="keyword">as</span> $key =&gt; $val)</span><br><span class="line">    &#123;</span><br><span class="line">        $val = &amp;$data[$key];</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<ol>
+<li>程序运行时, 每一次循环结束后变量$data的值是什么?</li>
+<li>程序执行完成后, 变量$data的值是什么?</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 程序共3次循环</span></span><br><span class="line"><span class="comment">// 第一次:</span></span><br><span class="line">    $key = <span class="number">0</span>; $val = <span class="string">'a'</span>;</span><br><span class="line">    $val = &amp;$data[<span class="number">0</span>] = <span class="string">'a'</span>;</span><br><span class="line"><span class="comment">// 此时 $data = ['a', 'b', 'c']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二次:</span></span><br><span class="line">    $key = <span class="number">1</span>; </span><br><span class="line">    $val = <span class="string">'b'</span>; </span><br><span class="line">    <span class="comment">// $data[0] 与 $val 指向同一内存, 所以 $data[0] = 'b';</span></span><br><span class="line">    $val = &amp;$data[<span class="number">1</span>] = <span class="string">'b'</span>;</span><br><span class="line"><span class="comment">// 此时 $data = ['b', 'b', 'c']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三次:</span></span><br><span class="line">    $key = <span class="number">2</span>; </span><br><span class="line">    $val = <span class="string">'c'</span>; </span><br><span class="line">    <span class="comment">// $data[1] 与 $val 指向同一内存, 所以 $data[1] = 'c';</span></span><br><span class="line">    $val = &amp;$data[<span class="number">2</span>] = <span class="string">'c'</span>;</span><br><span class="line"><span class="comment">// 此时 $data = ['b', 'c', 'c']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行完成后: $data = ['b', 'c', 'c']</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>使用 <code>memory_get_usage()</code>获取当前使用的内存量</p>
+</blockquote>
+<blockquote>
+<p>COW(Copy on Write)写入时复制:<br>  一种计算机程序设计领域的优化策略。其核心思想是，如果有多个调用者（callers）同时要求相同资源（如内存或磁盘上的数据存储），他们会共同获取相同的指针指向相同的资源，直到某个调用者试图修改资源的内容时，系统才会真正复制一份专用副本（private copy）给该调用者，而其他调用者所见到的最初的资源仍然保持不变。这过程对其他的调用者都是透明的（transparently）。此作法主要的优点是如果调用者没有修改该资源，就不会有副本（private copy）被创建，因此多个调用者只是读取操作时可以共享同一份资源。</p>
+</blockquote>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/20181114/PHP-基础-常量及数据类型/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    PHP - 基础 - 常量及数据类型
+                
+            </div>
+        </a>
+    
+    
+        <a href="/20181102/ubuntu-16-04-配置Rime输入法（中州韵）/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">ubuntu 16.04 配置Rime输入法（中州韵）</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Greendev &copy; 2018 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            
+
+                 &nbsp;|&nbsp;<a id="beian" href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16096155号-3</a>
+            
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
