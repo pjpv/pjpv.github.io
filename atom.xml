@@ -149,6 +149,31 @@
   </entry>
   
   <entry>
+    <title>CSS选择器 匹配H标签</title>
+    <link href="https://dxx.fun/20181102/CSS%E9%80%89%E6%8B%A9%E5%99%A8-%E5%8C%B9%E9%85%8DH%E6%A0%87%E7%AD%BE/"/>
+    <id>https://dxx.fun/20181102/CSS选择器-匹配H标签/</id>
+    <published>2018-11-02T11:30:00.000Z</published>
+    <updated>2018-11-02T11:31:25.983Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;.article :header&apos;)</span><br></pre></td></tr></table></figure><p>匹配h1,h2之类的标题</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="https://dxx.fun/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="css" scheme="https://dxx.fun/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ubuntu 16.04 配置Rime输入法（中州韵）</title>
     <link href="https://dxx.fun/20181102/ubuntu-16-04-%E9%85%8D%E7%BD%AERime%E8%BE%93%E5%85%A5%E6%B3%95%EF%BC%88%E4%B8%AD%E5%B7%9E%E9%9F%B5%EF%BC%89/"/>
     <id>https://dxx.fun/20181102/ubuntu-16-04-配置Rime输入法（中州韵）/</id>
@@ -181,31 +206,6 @@
   </entry>
   
   <entry>
-    <title>CSS选择器 匹配H标签</title>
-    <link href="https://dxx.fun/20181102/CSS%E9%80%89%E6%8B%A9%E5%99%A8-%E5%8C%B9%E9%85%8DH%E6%A0%87%E7%AD%BE/"/>
-    <id>https://dxx.fun/20181102/CSS选择器-匹配H标签/</id>
-    <published>2018-11-02T11:30:00.000Z</published>
-    <updated>2018-11-02T11:31:25.983Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;.article :header&apos;)</span><br></pre></td></tr></table></figure><p>匹配h1,h2之类的标题</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="https://dxx.fun/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="css" scheme="https://dxx.fun/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Django2.0 配置静态文件路由，验证网站所有权</title>
     <link href="https://dxx.fun/20181102/Django2-0-%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E8%B7%AF%E7%94%B1%EF%BC%8C%E9%AA%8C%E8%AF%81%E7%BD%91%E7%AB%99%E6%89%80%E6%9C%89%E6%9D%83/"/>
     <id>https://dxx.fun/20181102/Django2-0-配置静态文件路由，验证网站所有权/</id>
@@ -228,9 +228,9 @@
     
       <category term="Python" scheme="https://dxx.fun/tags/Python/"/>
     
-      <category term="DJango" scheme="https://dxx.fun/tags/DJango/"/>
-    
       <category term="静态文件" scheme="https://dxx.fun/tags/%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/"/>
+    
+      <category term="DJango" scheme="https://dxx.fun/tags/DJango/"/>
     
   </entry>
   
@@ -316,40 +316,11 @@
       <category term="Ubuntu" scheme="https://dxx.fun/categories/Ubuntu/"/>
     
     
-      <category term="Ubuntu" scheme="https://dxx.fun/tags/Ubuntu/"/>
-    
       <category term="Node" scheme="https://dxx.fun/tags/Node/"/>
     
+      <category term="Ubuntu" scheme="https://dxx.fun/tags/Ubuntu/"/>
+    
       <category term="Vue" scheme="https://dxx.fun/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python虚拟环境 Virtualenv及Virtualenvwrapper</title>
-    <link href="https://dxx.fun/20181102/python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83-Virtualenv%E5%8F%8AVirtualenvwrapper/"/>
-    <id>https://dxx.fun/20181102/python虚拟环境-Virtualenv及Virtualenvwrapper/</id>
-    <published>2018-11-02T11:27:00.000Z</published>
-    <updated>2018-11-02T11:39:26.676Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="虚拟环境"><a href="#虚拟环境" class="headerlink" title="虚拟环境"></a>虚拟环境</h1><h2 id="虚拟环境原理介绍："><a href="#虚拟环境原理介绍：" class="headerlink" title="虚拟环境原理介绍："></a>虚拟环境原理介绍：</h2><blockquote><p>虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。比如我们现在有一个项目是基于Django 1.10.x版本，又有一个项目是基于Django 0.9.x的版本，那么这时候就可以创建两个虚拟环境，在这两个虚拟环境中分别安装Django 1.10.x和Django 0.9.x来适配我们的项目。</p></blockquote><h2 id="virtualenv"><a href="#virtualenv" class="headerlink" title="virtualenv"></a>virtualenv</h2><h3 id="安装virtualenv："><a href="#安装virtualenv：" class="headerlink" title="安装virtualenv："></a>安装virtualenv：</h3><p>virtualenv是用来创建虚拟环境的软件工具，我们可以通过pip或者pip3来安装：</p><pre><code>pip install virtualenvpip3 install virtualenv</code></pre><h3 id="创建虚拟环境："><a href="#创建虚拟环境：" class="headerlink" title="创建虚拟环境："></a>创建虚拟环境：</h3><p>创建虚拟环境非常简单，通过以下命令就可以创建了：</p><pre><code>virtualenv [虚拟环境的名字]</code></pre><p>如果你当前的Python3/Scripts的查找路径在Python2/Scripts的前面，那么将会使用python3作为这个虚拟环境的解释器。<br>如果python2/Scripts在python3/Scripts前面，那么将会使用Python2来作为这个虚拟环境的解释器。</p><h3 id="进入环境："><a href="#进入环境：" class="headerlink" title="进入环境："></a>进入环境：</h3><p>虚拟环境创建好了以后，那么可以进入到这个虚拟环境中，然后安装一些第三方包，进入虚拟环境在不同的操作系统中有不同的方式，一般分为两种，第一种是Windows，第二种是*nix：</p><h4 id="windows进入虚拟环境："><a href="#windows进入虚拟环境：" class="headerlink" title="windows进入虚拟环境："></a>windows进入虚拟环境：</h4><p>进入到虚拟环境的Scripts文件夹中，然后执行activate。</p><h4 id="nix进入虚拟环境："><a href="#nix进入虚拟环境：" class="headerlink" title="*nix进入虚拟环境："></a>*nix进入虚拟环境：</h4><pre><code>source /path/to/virtualenv/bin/activate </code></pre><p>一旦你进入到了这个虚拟环境中，你安装包，卸载包都是在这个虚拟环境中，不会影响到外面的环境。</p><h3 id="退出虚拟环境："><a href="#退出虚拟环境：" class="headerlink" title="退出虚拟环境："></a>退出虚拟环境：</h3><p>退出虚拟环境很简单，通过一个命令就可以完成：</p><pre><code>deactivate</code></pre><h3 id="创建虚拟环境的时候指定Python解释器："><a href="#创建虚拟环境的时候指定Python解释器：" class="headerlink" title="创建虚拟环境的时候指定Python解释器："></a>创建虚拟环境的时候指定Python解释器：</h3><p>在电脑的环境变量中，一般是不会去更改一些环境变量的顺序的。<br>也就是说比如你的Python2/Scripts在Python3/Scripts的前面，那么你不会经常去更改他们的位置。<br>但是这时候我确实是想在创建虚拟环境的时候用Python3这个版本，这时候可以通过-p参数来指定具体的Python解释器：</p><pre><code>virtualenv -p C:\Python36\python.exe [virutalenv name]</code></pre><h2 id="virtualenvwrapper："><a href="#virtualenvwrapper：" class="headerlink" title="virtualenvwrapper："></a>virtualenvwrapper：</h2><blockquote><p>virtualenvwrapper这个软件包可以让我们管理虚拟环境变得更加简单。<br>不用再跑到某个目录下通过virtualenv来创建虚拟环境，并且激活的时候也要跑到具体的目录下去激活。</p></blockquote><h3 id="安装virtualenvwrapper："><a href="#安装virtualenvwrapper：" class="headerlink" title="安装virtualenvwrapper："></a>安装virtualenvwrapper：</h3><h4 id="nix："><a href="#nix：" class="headerlink" title="*nix："></a>*nix：</h4><pre><code>pip install virtualenvwrapper</code></pre><h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4><pre><code>pip install virtualenvwrapper-win</code></pre><h3 id="virtualenvwrapper基本使用："><a href="#virtualenvwrapper基本使用：" class="headerlink" title="virtualenvwrapper基本使用："></a>virtualenvwrapper基本使用：</h3><h4 id="创建虚拟环境：-1"><a href="#创建虚拟环境：-1" class="headerlink" title="创建虚拟环境："></a>创建虚拟环境：</h4><pre><code>mkvirtualenv my_env</code></pre><p>那么会在你当前用户下创建一个Env的文件夹，然后将这个虚拟环境安装到这个目录下。<br>如果你电脑中安装了python2和python3，并且两个版本中都安装了virtualenvwrapper，那么将会使用环境变量中第一个出现的Python版本来作为这个虚拟环境的Python解释器。</p><h4 id="切换到某个虚拟环境："><a href="#切换到某个虚拟环境：" class="headerlink" title="切换到某个虚拟环境："></a>切换到某个虚拟环境：</h4><pre><code>workon my_env</code></pre><h4 id="退出当前虚拟环境："><a href="#退出当前虚拟环境：" class="headerlink" title="退出当前虚拟环境："></a>退出当前虚拟环境：</h4><pre><code>deactivate</code></pre><h4 id="删除某个虚拟环境："><a href="#删除某个虚拟环境：" class="headerlink" title="删除某个虚拟环境："></a>删除某个虚拟环境：</h4><pre><code>rmvirtualenv my_env</code></pre><h4 id="列出所有虚拟环境："><a href="#列出所有虚拟环境：" class="headerlink" title="列出所有虚拟环境："></a>列出所有虚拟环境：</h4><pre><code>lsvirtualenv</code></pre><h4 id="进入到虚拟环境所在的目录："><a href="#进入到虚拟环境所在的目录：" class="headerlink" title="进入到虚拟环境所在的目录："></a>进入到虚拟环境所在的目录：</h4><pre><code>cd virtualenv</code></pre><h4 id="修改mkvirtualenv的默认路径："><a href="#修改mkvirtualenv的默认路径：" class="headerlink" title="修改mkvirtualenv的默认路径："></a>修改mkvirtualenv的默认路径：</h4><p>在我的电脑-&gt;右键-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;系统变量中添加一个参数WORKON_HOME，将这个参数的值设置为你需要的路径。</p><h4 id="创建虚拟环境的时候指定Python版本："><a href="#创建虚拟环境的时候指定Python版本：" class="headerlink" title="创建虚拟环境的时候指定Python版本："></a>创建虚拟环境的时候指定Python版本：</h4><p>在使用mkvirtualenv的时候，可以指定–python的参数来指定具体的python路径：</p><pre><code>mkvirtualenv --python==C:\Python36\python.exe hy_env</code></pre><blockquote><p><a href="https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html" target="_blank" rel="noopener">virtualenvwrapper 命令的完全列表</a></p></blockquote><p>参考：<a href="http://pythonguidecn.readthedocs.io/zh/latest/dev/virtualenvs.html" target="_blank" rel="noopener">http://pythonguidecn.readthedocs.io/zh/latest/dev/virtualenvs.html</a></p><h3 id="End"><a href="#End" class="headerlink" title="End"></a>End</h3><h4 id="AD"><a href="#AD" class="headerlink" title="AD"></a>AD</h4>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;虚拟环境&quot;&gt;&lt;a href=&quot;#虚拟环境&quot; class=&quot;headerlink&quot; title=&quot;虚拟环境&quot;&gt;&lt;/a&gt;虚拟环境&lt;/h1&gt;&lt;h2 id=&quot;虚拟环境原理介绍：&quot;&gt;&lt;a href=&quot;#虚拟环境原理介绍：&quot; class=&quot;headerlink&quot; title=
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="https://dxx.fun/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="https://dxx.fun/tags/Python/"/>
-    
-      <category term="Virtualenv" scheme="https://dxx.fun/tags/Virtualenv/"/>
-    
-      <category term="Virtualenvwrapper" scheme="https://dxx.fun/tags/Virtualenvwrapper/"/>
     
   </entry>
   
@@ -384,6 +355,35 @@
   </entry>
   
   <entry>
+    <title>python虚拟环境 Virtualenv及Virtualenvwrapper</title>
+    <link href="https://dxx.fun/20181102/python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83-Virtualenv%E5%8F%8AVirtualenvwrapper/"/>
+    <id>https://dxx.fun/20181102/python虚拟环境-Virtualenv及Virtualenvwrapper/</id>
+    <published>2018-11-02T11:27:00.000Z</published>
+    <updated>2018-11-02T11:39:26.676Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="虚拟环境"><a href="#虚拟环境" class="headerlink" title="虚拟环境"></a>虚拟环境</h1><h2 id="虚拟环境原理介绍："><a href="#虚拟环境原理介绍：" class="headerlink" title="虚拟环境原理介绍："></a>虚拟环境原理介绍：</h2><blockquote><p>虚拟环境相当于一个抽屉，在这个抽屉中安装的任何软件包都不会影响到其他抽屉。并且在项目中，我可以指定这个项目的虚拟环境来配合我的项目。比如我们现在有一个项目是基于Django 1.10.x版本，又有一个项目是基于Django 0.9.x的版本，那么这时候就可以创建两个虚拟环境，在这两个虚拟环境中分别安装Django 1.10.x和Django 0.9.x来适配我们的项目。</p></blockquote><h2 id="virtualenv"><a href="#virtualenv" class="headerlink" title="virtualenv"></a>virtualenv</h2><h3 id="安装virtualenv："><a href="#安装virtualenv：" class="headerlink" title="安装virtualenv："></a>安装virtualenv：</h3><p>virtualenv是用来创建虚拟环境的软件工具，我们可以通过pip或者pip3来安装：</p><pre><code>pip install virtualenvpip3 install virtualenv</code></pre><h3 id="创建虚拟环境："><a href="#创建虚拟环境：" class="headerlink" title="创建虚拟环境："></a>创建虚拟环境：</h3><p>创建虚拟环境非常简单，通过以下命令就可以创建了：</p><pre><code>virtualenv [虚拟环境的名字]</code></pre><p>如果你当前的Python3/Scripts的查找路径在Python2/Scripts的前面，那么将会使用python3作为这个虚拟环境的解释器。<br>如果python2/Scripts在python3/Scripts前面，那么将会使用Python2来作为这个虚拟环境的解释器。</p><h3 id="进入环境："><a href="#进入环境：" class="headerlink" title="进入环境："></a>进入环境：</h3><p>虚拟环境创建好了以后，那么可以进入到这个虚拟环境中，然后安装一些第三方包，进入虚拟环境在不同的操作系统中有不同的方式，一般分为两种，第一种是Windows，第二种是*nix：</p><h4 id="windows进入虚拟环境："><a href="#windows进入虚拟环境：" class="headerlink" title="windows进入虚拟环境："></a>windows进入虚拟环境：</h4><p>进入到虚拟环境的Scripts文件夹中，然后执行activate。</p><h4 id="nix进入虚拟环境："><a href="#nix进入虚拟环境：" class="headerlink" title="*nix进入虚拟环境："></a>*nix进入虚拟环境：</h4><pre><code>source /path/to/virtualenv/bin/activate </code></pre><p>一旦你进入到了这个虚拟环境中，你安装包，卸载包都是在这个虚拟环境中，不会影响到外面的环境。</p><h3 id="退出虚拟环境："><a href="#退出虚拟环境：" class="headerlink" title="退出虚拟环境："></a>退出虚拟环境：</h3><p>退出虚拟环境很简单，通过一个命令就可以完成：</p><pre><code>deactivate</code></pre><h3 id="创建虚拟环境的时候指定Python解释器："><a href="#创建虚拟环境的时候指定Python解释器：" class="headerlink" title="创建虚拟环境的时候指定Python解释器："></a>创建虚拟环境的时候指定Python解释器：</h3><p>在电脑的环境变量中，一般是不会去更改一些环境变量的顺序的。<br>也就是说比如你的Python2/Scripts在Python3/Scripts的前面，那么你不会经常去更改他们的位置。<br>但是这时候我确实是想在创建虚拟环境的时候用Python3这个版本，这时候可以通过-p参数来指定具体的Python解释器：</p><pre><code>virtualenv -p C:\Python36\python.exe [virutalenv name]</code></pre><h2 id="virtualenvwrapper："><a href="#virtualenvwrapper：" class="headerlink" title="virtualenvwrapper："></a>virtualenvwrapper：</h2><blockquote><p>virtualenvwrapper这个软件包可以让我们管理虚拟环境变得更加简单。<br>不用再跑到某个目录下通过virtualenv来创建虚拟环境，并且激活的时候也要跑到具体的目录下去激活。</p></blockquote><h3 id="安装virtualenvwrapper："><a href="#安装virtualenvwrapper：" class="headerlink" title="安装virtualenvwrapper："></a>安装virtualenvwrapper：</h3><h4 id="nix："><a href="#nix：" class="headerlink" title="*nix："></a>*nix：</h4><pre><code>pip install virtualenvwrapper</code></pre><h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4><pre><code>pip install virtualenvwrapper-win</code></pre><h3 id="virtualenvwrapper基本使用："><a href="#virtualenvwrapper基本使用：" class="headerlink" title="virtualenvwrapper基本使用："></a>virtualenvwrapper基本使用：</h3><h4 id="创建虚拟环境：-1"><a href="#创建虚拟环境：-1" class="headerlink" title="创建虚拟环境："></a>创建虚拟环境：</h4><pre><code>mkvirtualenv my_env</code></pre><p>那么会在你当前用户下创建一个Env的文件夹，然后将这个虚拟环境安装到这个目录下。<br>如果你电脑中安装了python2和python3，并且两个版本中都安装了virtualenvwrapper，那么将会使用环境变量中第一个出现的Python版本来作为这个虚拟环境的Python解释器。</p><h4 id="切换到某个虚拟环境："><a href="#切换到某个虚拟环境：" class="headerlink" title="切换到某个虚拟环境："></a>切换到某个虚拟环境：</h4><pre><code>workon my_env</code></pre><h4 id="退出当前虚拟环境："><a href="#退出当前虚拟环境：" class="headerlink" title="退出当前虚拟环境："></a>退出当前虚拟环境：</h4><pre><code>deactivate</code></pre><h4 id="删除某个虚拟环境："><a href="#删除某个虚拟环境：" class="headerlink" title="删除某个虚拟环境："></a>删除某个虚拟环境：</h4><pre><code>rmvirtualenv my_env</code></pre><h4 id="列出所有虚拟环境："><a href="#列出所有虚拟环境：" class="headerlink" title="列出所有虚拟环境："></a>列出所有虚拟环境：</h4><pre><code>lsvirtualenv</code></pre><h4 id="进入到虚拟环境所在的目录："><a href="#进入到虚拟环境所在的目录：" class="headerlink" title="进入到虚拟环境所在的目录："></a>进入到虚拟环境所在的目录：</h4><pre><code>cd virtualenv</code></pre><h4 id="修改mkvirtualenv的默认路径："><a href="#修改mkvirtualenv的默认路径：" class="headerlink" title="修改mkvirtualenv的默认路径："></a>修改mkvirtualenv的默认路径：</h4><p>在我的电脑-&gt;右键-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;系统变量中添加一个参数WORKON_HOME，将这个参数的值设置为你需要的路径。</p><h4 id="创建虚拟环境的时候指定Python版本："><a href="#创建虚拟环境的时候指定Python版本：" class="headerlink" title="创建虚拟环境的时候指定Python版本："></a>创建虚拟环境的时候指定Python版本：</h4><p>在使用mkvirtualenv的时候，可以指定–python的参数来指定具体的python路径：</p><pre><code>mkvirtualenv --python==C:\Python36\python.exe hy_env</code></pre><blockquote><p><a href="https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html" target="_blank" rel="noopener">virtualenvwrapper 命令的完全列表</a></p></blockquote><p>参考：<a href="http://pythonguidecn.readthedocs.io/zh/latest/dev/virtualenvs.html" target="_blank" rel="noopener">http://pythonguidecn.readthedocs.io/zh/latest/dev/virtualenvs.html</a></p><h3 id="End"><a href="#End" class="headerlink" title="End"></a>End</h3><h4 id="AD"><a href="#AD" class="headerlink" title="AD"></a>AD</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;虚拟环境&quot;&gt;&lt;a href=&quot;#虚拟环境&quot; class=&quot;headerlink&quot; title=&quot;虚拟环境&quot;&gt;&lt;/a&gt;虚拟环境&lt;/h1&gt;&lt;h2 id=&quot;虚拟环境原理介绍：&quot;&gt;&lt;a href=&quot;#虚拟环境原理介绍：&quot; class=&quot;headerlink&quot; title=
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://dxx.fun/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://dxx.fun/tags/Python/"/>
+    
+      <category term="Virtualenv" scheme="https://dxx.fun/tags/Virtualenv/"/>
+    
+      <category term="Virtualenvwrapper" scheme="https://dxx.fun/tags/Virtualenvwrapper/"/>
+    
+  </entry>
+  
+  <entry>
     <title>pm2</title>
     <link href="https://dxx.fun/20181102/pm2/"/>
     <id>https://dxx.fun/20181102/pm2/</id>
@@ -404,11 +404,11 @@
       <category term="前端" scheme="https://dxx.fun/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
+      <category term="Hexo" scheme="https://dxx.fun/tags/Hexo/"/>
+    
       <category term="Node" scheme="https://dxx.fun/tags/Node/"/>
     
       <category term="pm2" scheme="https://dxx.fun/tags/pm2/"/>
-    
-      <category term="Hexo" scheme="https://dxx.fun/tags/Hexo/"/>
     
   </entry>
   
