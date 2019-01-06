@@ -539,8 +539,8 @@
     <title>Win7 重装日志 软件</title>
     <link href="https://dxx.fun/20190104/Win7-%E9%87%8D%E8%A3%85%E6%97%A5%E5%BF%97/"/>
     <id>https://dxx.fun/20190104/Win7-重装日志/</id>
-    <published>2019-01-04T10:49:48.000Z</published>
-    <updated>2019-01-04T12:40:50.539Z</updated>
+    <published>2019-01-04T10:49:00.000Z</published>
+    <updated>2019-01-06T10:38:00.123Z</updated>
     
     <content type="html"><![CDATA[<h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><ol><li><p>7-zip    (<a href="https://www.7-zip.org/" target="_blank" rel="noopener">https://www.7-zip.org/</a>)</p></li><li><p>输入法</p><ul><li>搜狗输入法 (<a href="https://pinyin.sogou.com/" target="_blank" rel="noopener">https://pinyin.sogou.com/</a>) / <a href="http://www.xingkbjm.com/ime.html" target="_blank" rel="noopener">星空修改版</a></li><li>RIME(小狼毫)    (<a href="https://rime.im/download/" target="_blank" rel="noopener">https://rime.im/download/</a>)</li></ul></li><li><p>浏览器</p><ul><li>Chrome    (<a href="https://www.google.cn/chrome/" target="_blank" rel="noopener">https://www.google.cn/chrome/</a>)</li><li>Chrome 开发者版    (<a href="https://www.google.cn/chrome/dev" target="_blank" rel="noopener">https://www.google.cn/chrome/dev</a>)</li><li>360极速浏览器    <a href="https://browser.360.cn/ee/" target="_blank" rel="noopener">官方下载</a></li></ul></li><li><p>浏览器插件</p><ul><li>SwitchyOmega (<a href="https://github.com/FelisCatus/SwitchyOmega/releases" target="_blank" rel="noopener">https://github.com/FelisCatus/SwitchyOmega/releases</a>)</li></ul></li><li><p>Fiddler  (<a href="https://www.telerik.com/download/fiddler" target="_blank" rel="noopener">https://www.telerik.com/download/fiddler</a>)</p></li><li><p>Python</p><ul><li>官方版本    (<a href="https://www.python.org/downloads/" target="_blank" rel="noopener">https://www.python.org/downloads/</a>)</li><li>AnaConda  (<a href="https://www.anaconda.com/download/" target="_blank" rel="noopener">https://www.anaconda.com/download/</a>)</li></ul></li><li><p>PyChram (<a href="http://www.jetbrains.com/pycharm/download/" target="_blank" rel="noopener">http://www.jetbrains.com/pycharm/download/</a>)</p></li><li><p>Everything (<a href="http://www.voidtools.com/downloads/" target="_blank" rel="noopener">http://www.voidtools.com/downloads/</a>)</p><ul><li>语言包 (<a href="http://www.voidtools.com/Everything.lng.zip" target="_blank" rel="noopener">http://www.voidtools.com/Everything.lng.zip</a>)</li></ul></li><li><p>Listary (<a href="https://www.listary.com/download" target="_blank" rel="noopener">https://www.listary.com/download</a>)</p></li><li><p>f.lux (<a href="https://justgetflux.com/" target="_blank" rel="noopener">https://justgetflux.com/</a>)</p></li><li><p>Sourcetree (<a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">https://www.sourcetreeapp.com/</a>)</p><ul><li><a href="https://www.cnblogs.com/lucio110/p/8192792.html" target="_blank" rel="noopener">跳过注册</a></li></ul></li></ol>]]></content>
     
@@ -554,6 +554,10 @@
     
     </summary>
     
+      <category term="Other" scheme="https://dxx.fun/categories/Other/"/>
+    
+    
+      <category term="win7" scheme="https://dxx.fun/tags/win7/"/>
     
   </entry>
   
