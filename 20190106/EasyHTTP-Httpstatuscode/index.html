@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>EasyHTTP - Httpstatuscode | Blog</title>
+    
+    
+        <meta name="keywords" content="C#,EasyHTTP,HTTP,HttpStatuscode">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="包含为HTTP定义的状态代码的值。 Continue = 100等效于HTTP状态100.System.Net.HttpStatusCode.Continue表示客户端可以继续其请求。 SwitchingProtocols = 101等效于HTTP状态101.System.Net.HttpStatusCode.SwitchingProtocols表示正在更改协议版本或协议。 OK = 200相当于">
+<meta name="keywords" content="C#,EasyHTTP,HTTP,HttpStatuscode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EasyHTTP - Httpstatuscode">
+<meta property="og:url" content="https://dxx.fun/20190106/EasyHTTP-Httpstatuscode/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="包含为HTTP定义的状态代码的值。 Continue = 100等效于HTTP状态100.System.Net.HttpStatusCode.Continue表示客户端可以继续其请求。 SwitchingProtocols = 101等效于HTTP状态101.System.Net.HttpStatusCode.SwitchingProtocols表示正在更改协议版本或协议。 OK = 200相当于">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-06T08:42:38.260Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="EasyHTTP - Httpstatuscode">
+<meta name="twitter:description" content="包含为HTTP定义的状态代码的值。 Continue = 100等效于HTTP状态100.System.Net.HttpStatusCode.Continue表示客户端可以继续其请求。 SwitchingProtocols = 101等效于HTTP状态101.System.Net.HttpStatusCode.SwitchingProtocols表示正在更改协议版本或协议。 OK = 200相当于">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                
+                <span class="site-title">Blog</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives/">归档</a>
+                
+                    <a class="main-nav-link" href="/categories/">分类</a>
+                
+                    <a class="main-nav-link" href="/about/">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives/">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories/">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/about/">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            C#
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            EasyHTTP
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            Documentation
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20190106/EasyHTTP-Delete/">EasyHTTP - Delete</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Get/">EasyHTTP - Get</a></li>  <li class="file"><a href="/20190106/EasyHTTP-GetFile/">EasyHTTP - GetFile</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Head/">EasyHTTP - Head</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Home/">EasyHTTP - Home</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Httpclient/">EasyHTTP - Httpclient</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Post/">EasyHTTP - Post</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Put/">EasyHTTP - Put</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Putfile/">EasyHTTP - PutFile</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Request/">EasyHTTP - Request</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Response/">EasyHTTP - Response</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Streamresponse/">EasyHTTP - Streamresponse</a></li>  <li class="file active"><a href="/20190106/EasyHTTP-Httpstatuscode/">EasyHTTP - Httpstatuscode</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            reprint
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20190106/Easy-HTTP–not-Just-a-Catchy-Name/">Easy HTTP–not Just a Catchy Name</a></li>  <li class="file"><a href="/20190106/Easyhttp-by-Hadi-Hariri/">Easyhttp by Hadi Hariri</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Django
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/Django-2-0-静态文件404解决方法/">Django 2.0 静态文件404解决方法</a></li>  <li class="file"><a href="/20181102/Django2-0-配置静态文件路由，验证网站所有权/">Django2.0 配置静态文件路由，验证网站所有权</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            PHP
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            基础
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181114/PHP-基础-常量及数据类型/">PHP - 基础 - 常量及数据类型</a></li>  <li class="file"><a href="/20181114/PHP-基础-引用变量/">PHP - 基础 - 引用变量</a></li>  <li class="file"><a href="/20181114/PHP-基础-流程控制/">PHP - 基础 - 流程控制</a></li>  <li class="file"><a href="/20181114/PHP-基础-运算符/">PHP - 基础 - 运算符</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Python
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/Python-基础-数据类型-字符串类型与操作/">Python 基础 - 数据类型 - 字符串类型与操作</a></li>  <li class="file"><a href="/20181102/python虚拟环境-Virtualenv及Virtualenvwrapper/">python虚拟环境 Virtualenv及Virtualenvwrapper</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Ubuntu
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/ubuntu-16-04-python-3-x-安装OpenSSL/">ubuntu 16.04 python 3.x 安装OpenSSL</a></li>  <li class="file"><a href="/20181102/ubuntu-16-04-配置Rime输入法（中州韵）/">ubuntu 16.04 配置Rime输入法（中州韵）</a></li>  <li class="file"><a href="/20181102/ubuntu安装node-vue/">ubuntu安装node vue</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            前端
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/CSS选择器-匹配H标签/">CSS选择器 匹配H标签</a></li>  <li class="file"><a href="/20181102/hexo-admin-deploy/">hexo-admin deploy</a></li>  <li class="file"><a href="/20181102/pm2/">pm2</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/20181102/hello-world/">Hello World</a></li>  <li class="file"><a href="/20190104/Win7-重装日志/">Win7 重装日志 软件</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>归档</span></h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">15</span></li></ul>
+        </div>
+    </div>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-EasyHTTP-Httpstatuscode" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/C/">C#</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/C/EasyHTTP/">EasyHTTP</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/C/EasyHTTP/Documentation/">Documentation</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/C/">C#</a>, <a class="tag-link" href="/tags/EasyHTTP/">EasyHTTP</a>, <a class="tag-link" href="/tags/HTTP/">HTTP</a>, <a class="tag-link" href="/tags/HttpStatuscode/">HttpStatuscode</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/20190106/EasyHTTP-Httpstatuscode/">
+            <time datetime="2019-01-06T06:27:00.000Z" itemprop="datePublished">2019-01-06</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            EasyHTTP - Httpstatuscode
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p>包含为HTTP定义的状态代码的值。</p>
+<h2 id="Continue-100"><a href="#Continue-100" class="headerlink" title="Continue = 100"></a>Continue = 100</h2><p>等效于HTTP状态100.<br><code>System.Net.HttpStatusCode.Continue</code>表示<br>客户端可以继续其请求。</p>
+<h2 id="SwitchingProtocols-101"><a href="#SwitchingProtocols-101" class="headerlink" title="SwitchingProtocols = 101"></a>SwitchingProtocols = 101</h2><p>等效于HTTP状态101.<br><code>System.Net.HttpStatusCode.SwitchingProtocols</code><br>表示正在更改协议版本或协议。</p>
+<h2 id="OK-200"><a href="#OK-200" class="headerlink" title="OK = 200"></a>OK = 200</h2><p>相当于HTTP状态200.<br><code>System.Net.HttpStatusCode.OK</code>表示请求成功，请求的信息在响应中。<br>这是最常见的状态代码。</p>
+<h2 id="Created-201"><a href="#Created-201" class="headerlink" title="Created = 201"></a>Created = 201</h2><p>等效于HTTP状态201.<br><code>System.Net.HttpStatusCode.Created</code>表示请求导致在发送响应之前创建新资源。</p>
+<h2 id="Accepted-202"><a href="#Accepted-202" class="headerlink" title="Accepted = 202"></a>Accepted = 202</h2><p>等效于HTTP状态202.<br><code>System.Net.HttpStatusCode.Accepted</code>表示<br>该请求已被接受进一步处理。</p>
+<h2 id="NonAuthoritativeInformation-203"><a href="#NonAuthoritativeInformation-203" class="headerlink" title="NonAuthoritativeInformation = 203"></a>NonAuthoritativeInformation = 203</h2><p>等效于HTTP状态203.<br><code>System.Net.HttpStatusCode.NonAuthoritativeInformation</code> 表示返回的元信息来自原始服务器的缓存副本，因此可能是不正确的。</p>
+<h2 id="NoContent-204"><a href="#NoContent-204" class="headerlink" title="NoContent = 204"></a>NoContent = 204</h2><p>等效于HTTP状态204.<br><code>System.Net.HttpStatusCode.NoContent</code>表示请求已成功处理并且响应内容为空。</p>
+<h2 id="ResetContent-205"><a href="#ResetContent-205" class="headerlink" title="ResetContent = 205"></a>ResetContent = 205</h2><p>等效于HTTP状态205.<br><code>System.Net.HttpStatusCode.ResetContent</code>表示客户端应重置（不重新加载）当前资源。</p>
+<h2 id="PartialContent-206"><a href="#PartialContent-206" class="headerlink" title="PartialContent = 206"></a>PartialContent = 206</h2><p>等效于HTTP状态206.<br><code>System.Net.HttpStatusCode.PartialContent</code>表示响应是包含字节范围的GET请求所请求的部分响应。</p>
+<h2 id="MultipleChoices-300"><a href="#MultipleChoices-300" class="headerlink" title="MultipleChoices = 300"></a>MultipleChoices = 300</h2><p>等效于HTTP状态300.<br><code>System.Net.HttpStatusCode.MultipleChoices</code><br>表示所请求的信息具有多个表示。<br>默认操作是将此状态视为重定向，并按照与此响应关联的<code>Location</code>标头的内容进行操作。</p>
+<h2 id="Ambiguous-300"><a href="#Ambiguous-300" class="headerlink" title="Ambiguous = 300"></a>Ambiguous = 300</h2><p>等效于HTTP状态300.<br><code>System.Net.HttpStatusCode.Ambiguous</code><br>表示所请求的信息具有多个表示。<br>默认操作是将此状态视为重定向，并按照与此响应关联的<code>Location</code>标头的内容进行操作。</p>
+<h2 id="MovedPermanently-301"><a href="#MovedPermanently-301" class="headerlink" title="MovedPermanently = 301"></a>MovedPermanently = 301</h2><p>等效于HTTP状态301.<br><code>System.Net.HttpStatusCode.MovedPermanently</code>表示所请求的信息已移至<code>Location头</code>中指定的URI。<br>收到此状态时的默认操作是遵循与响应关联的Location标头。</p>
+<h2 id="Moved-301"><a href="#Moved-301" class="headerlink" title="Moved = 301"></a>Moved = 301</h2><p>等效于HTTP状态301.<br><code>System.Net.HttpStatusCode.Moved</code>表示所请求的信息已移至<code>Location</code>头中指定的URI。<br>收到此状态时的默认操作是遵循与响应关联的<code>Location</code>标头。<br>当原始请求方法是<code>POST</code>时，重定向的请求将使用<code>GET</code>方法。</p>
+<h2 id="Found-302"><a href="#Found-302" class="headerlink" title="Found = 302"></a>Found = 302</h2><p>等效于HTTP状态302.<br><code>System.Net.HttpStatusCode.Found</code>表示所请求的信息位于<code>Location</code>标头中指定的<code>URI</code>。<br>收到此状态时的默认操作是遵循与响应关联的<code>Location</code>标头。<br>当原始请求方法是<code>POST</code>时，重定向的请求将使用<code>GET</code>方法。</p>
+<h2 id="Redirect-302"><a href="#Redirect-302" class="headerlink" title="Redirect = 302"></a>Redirect = 302</h2><p>等效于HTTP状态302.<br><code>System.Net.HttpStatusCode.Redirect</code>表示所请求的信息位于<code>Location头</code>中指定的<code>URI</code>。<br>收到此状态时的默认操作是遵循与响应关联的<code>Location</code>标头。<br>当原始请求方法是<code>POST</code>时，重定向的请求将使用<code>GET</code>方法。</p>
+<h2 id="SeeOther-303"><a href="#SeeOther-303" class="headerlink" title="SeeOther = 303"></a>SeeOther = 303</h2><p>等效于HTTP状态303.<br><code>System.Net.HttpStatusCode.SeeOther</code>自动将客户端重定向到作为<code>POST</code>结果的<code>Location</code>头中指定的<code>URI</code>。<br>对<code>Location</code>标头指定的资源的请求将使用<code>GET</code>进行。</p>
+<h2 id="RedirectMethod-303"><a href="#RedirectMethod-303" class="headerlink" title="RedirectMethod = 303"></a>RedirectMethod = 303</h2><p>等效于HTTP状态303.<br>作为POST的结果，<code>System.Net.HttpStatusCode.RedirectMethod</code>自动将客户端重定向到<code>Location</code>头中指定的<code>URI</code>。对<code>Location</code>标头指定的资源的请求将使用<code>GET</code>进行。</p>
+<h2 id="NotModified-304"><a href="#NotModified-304" class="headerlink" title="NotModified = 304"></a>NotModified = 304</h2><p>等效于HTTP状态304. <code>System.Net.HttpStatusCode.NotModified</code>表示客户端的缓存副本是最新的。资源的内容不会传输。</p>
+<h2 id="UseProxy-305"><a href="#UseProxy-305" class="headerlink" title="UseProxy = 305"></a>UseProxy = 305</h2><p>等效于HTTP状态305.<br><code>System.Net.HttpStatusCode.UseProxy</code>表示请求应使用<code>Location</code>头中指定的<code>URI</code>处的代理服务器。</p>
+<h2 id="Unused-306"><a href="#Unused-306" class="headerlink" title="Unused = 306"></a>Unused = 306</h2><p>等效于HTTP状态306.<br><code>System.Net.HttpStatusCode.Unused</code>是 <code>HTTP/1.1</code> 规范的建议扩展，未完全指定。</p>
+<h2 id="TemporaryRedirect-307"><a href="#TemporaryRedirect-307" class="headerlink" title="TemporaryRedirect = 307"></a>TemporaryRedirect = 307</h2><p>等效于HTTP状态307.<br><code>System.Net.HttpStatusCode.TemporaryRedirect</code>指示请求信息位于<code>Location</code>头中指定的<code>URI</code>。<br>收到此状态时的默认操作是遵循与响应关联的<code>Location</code>标头。<br>当原始请求方法是<code>POST</code>时，重定向的请求也将使用<code>POST</code>方法。</p>
+<h2 id="RedirectKeepVerb-307"><a href="#RedirectKeepVerb-307" class="headerlink" title="RedirectKeepVerb = 307"></a>RedirectKeepVerb = 307</h2><p>等效于HTTP状态307.<br><code>System.Net.HttpStatusCode.RedirectKeepVerb</code>指示请求信息位于<code>Location</code>头中指定的<code>URI</code>。<br>收到此状态时的默认操作是遵循与响应关联的<code>Location</code>标头。<br>当原始请求方法是<code>POST</code>时，重定向的请求也将使用<code>POST</code>方法。</p>
+<h2 id="BadRequest-400"><a href="#BadRequest-400" class="headerlink" title="BadRequest = 400"></a>BadRequest = 400</h2><p>等效于HTTP状态400.<br><code>System.Net.HttpStatusCode.BadRequest</code>表示服务器无法理解该请求。<br>如果没有其他错误适用，或者确切错误未知或没有自己的错误代码，则会发送<code>System.Net.HttpStatusCode.BadRequest</code>。</p>
+<h2 id="Unauthorized-401"><a href="#Unauthorized-401" class="headerlink" title="Unauthorized = 401"></a>Unauthorized = 401</h2><p>等效于HTTP状态401.<br><code>System.Net.HttpStatusCode.Unauthorized</code>指示所请求的资源需要身份验证。<br><code>WWW-Authenticate</code>标头包含有关如何执行身份验证的详细信息。</p>
+<h2 id="PaymentRequired-402"><a href="#PaymentRequired-402" class="headerlink" title="PaymentRequired = 402"></a>PaymentRequired = 402</h2><p>等效于HTTP状态402.<br>保留<code>System.Net.HttpStatusCode.PaymentRequired</code>以供将来使用。</p>
+<h2 id="Forbidden-403"><a href="#Forbidden-403" class="headerlink" title="Forbidden = 403"></a>Forbidden = 403</h2><p>等效于HTTP状态403.<br><code>System.Net.HttpStatusCode.Forbidden</code>表示服务器拒绝满足请求。</p>
+<h2 id="NotFound-404"><a href="#NotFound-404" class="headerlink" title="NotFound = 404"></a>NotFound = 404</h2><p>等效于HTTP状态404.<br><code>System.Net.HttpStatusCode.NotFound</code>指示服务器上不存在所请求的资源。</p>
+<h2 id="MethodNotAllowed-405"><a href="#MethodNotAllowed-405" class="headerlink" title="MethodNotAllowed = 405"></a>MethodNotAllowed = 405</h2><p>等效于HTTP状态405.<br><code>System.Net.HttpStatusCode.MethodNotAllowed</code>指示在请求的资源上不允许请求方法（<code>POST</code>或<code>GET</code>）。</p>
+<h2 id="NotAcceptable-406"><a href="#NotAcceptable-406" class="headerlink" title="NotAcceptable = 406"></a>NotAcceptable = 406</h2><p>等效于HTTP状态406.<br><code>System.Net.HttpStatusCode.NotAcceptable</code>指示客户端已使用<code>Accept</code>标头指示它不接受资源的任何可用表示。</p>
+<h2 id="ProxyAuthenticationRequired-407"><a href="#ProxyAuthenticationRequired-407" class="headerlink" title="ProxyAuthenticationRequired = 407"></a>ProxyAuthenticationRequired = 407</h2><p>等效于HTTP状态407.<br><code>System.Net.HttpStatusCode.ProxyAuthenticationRequired</code>指示所请求的代理需要身份验证。<br><code>Proxy-authenticate</code>标头包含有关如何执行身份验证的详细信息。</p>
+<h2 id="RequestTimeout-408"><a href="#RequestTimeout-408" class="headerlink" title="RequestTimeout = 408"></a>RequestTimeout = 408</h2><p>等效于HTTP状态408.<br><code>System.Net.HttpStatusCode.RequestTimeout</code>指示客户端在服务器期望请求的时间内未发送请求。</p>
+<h2 id="Conflict-409"><a href="#Conflict-409" class="headerlink" title="Conflict = 409"></a>Conflict = 409</h2><p>等效于HTTP状态409.<br><code>System.Net.HttpStatusCode.Conflict</code>表示由于服务器上的冲突而无法执行请求。</p>
+<h2 id="Gone-410"><a href="#Gone-410" class="headerlink" title="Gone = 410"></a>Gone = 410</h2><p>等效于HTTP状态410.<br><code>System.Net.HttpStatusCode.Gone</code>表示请求的资源不再可用。</p>
+<h2 id="LengthRequired-411"><a href="#LengthRequired-411" class="headerlink" title="LengthRequired = 411"></a>LengthRequired = 411</h2><p>等效于HTTP状态411.<br><code>System.Net.HttpStatusCode.LengthRequired</code>指示缺少所需的<code>Content-length</code>标头。</p>
+<h2 id="PreconditionFailed-412"><a href="#PreconditionFailed-412" class="headerlink" title="PreconditionFailed = 412"></a>PreconditionFailed = 412</h2><p>等效于HTTP状态412.<br><code>System.Net.HttpStatusCode.PreconditionFailed</code>指示为此请求设置的条件失败，并且无法执行请求。条件使用条件请求标头设置，如<code>If-Match</code>，<code>If-None-Match</code>或<code>If-Unmodified-Since</code>。</p>
+<h2 id="RequestEntityTooLarge-413"><a href="#RequestEntityTooLarge-413" class="headerlink" title="RequestEntityTooLarge = 413"></a>RequestEntityTooLarge = 413</h2><p>等效于HTTP状态413.<br><code>System.Net.HttpStatusCode.RequestEntityTooLarge</code>指示请求对于服务器来说太大而无法处理。</p>
+<h2 id="RequestUriTooLong-414"><a href="#RequestUriTooLong-414" class="headerlink" title="RequestUriTooLong = 414"></a>RequestUriTooLong = 414</h2><p>等效于HTTP状态414.<br><code>System.Net.HttpStatusCode.RequestUriTooLong</code>表示<code>URI</code>太长。</p>
+<h2 id="UnsupportedMediaType-415"><a href="#UnsupportedMediaType-415" class="headerlink" title="UnsupportedMediaType = 415"></a>UnsupportedMediaType = 415</h2><p>等效于HTTP状态415.<br><code>System.Net.HttpStatusCode.UnsupportedMediaType</code>指示请求是不受支持的类型。</p>
+<h2 id="RequestedRangeNotSatisfiable-416"><a href="#RequestedRangeNotSatisfiable-416" class="headerlink" title="RequestedRangeNotSatisfiable = 416"></a>RequestedRangeNotSatisfiable = 416</h2><p>等效于HTTP状态416.<br><code>System.Net.HttpStatusCode.RequestedRangeNotSatisfiable</code>指示无法返回从资源请求的数据范围，因为范围的开头位于资源的开头之前，或者范围的结尾位于资源的结束。</p>
+<h2 id="ExpectationFailed-417"><a href="#ExpectationFailed-417" class="headerlink" title="ExpectationFailed = 417"></a>ExpectationFailed = 417</h2><p>等效于HTTP状态417.<br><code>System.Net.HttpStatusCode.ExpectationFailed</code>指示服务器无法满足<code>Expect</code>标头中给出的期望。</p>
+<h2 id="InternalServerError-500"><a href="#InternalServerError-500" class="headerlink" title="InternalServerError = 500"></a>InternalServerError = 500</h2><p>等效于HTTP状态500.<br><code>System.Net.HttpStatusCode.InternalServerError</code>指示服务器上发生了一般错误。</p>
+<h2 id="NotImplemented-501"><a href="#NotImplemented-501" class="headerlink" title="NotImplemented = 501"></a>NotImplemented = 501</h2><p>等效于HTTP状态501.<br><code>System.Net.HttpStatusCode.NotImplemented</code>指示服务器不支持所请求的功能。</p>
+<h2 id="BadGateway-502"><a href="#BadGateway-502" class="headerlink" title="BadGateway = 502"></a>BadGateway = 502</h2><p>等效于HTTP状态502.<br><code>System.Net.HttpStatusCode.BadGateway</code>指示中间代理服务器从另一个代理或源服务器收到错误响应。</p>
+<h2 id="ServiceUnavailable-503"><a href="#ServiceUnavailable-503" class="headerlink" title="ServiceUnavailable = 503"></a>ServiceUnavailable = 503</h2><p>等效于HTTP状态503.<br><code>System.Net.HttpStatusCode.ServiceUnavailable</code>指示服务器暂时不可用，通常是由于高负载或维护。</p>
+<h2 id="GatewayTimeout-504"><a href="#GatewayTimeout-504" class="headerlink" title="GatewayTimeout = 504"></a>GatewayTimeout = 504</h2><p>等效于HTTP状态504.<br><code>System.Net.HttpStatusCode.GatewayTimeout</code>指示中间代理服务器在等待来自另一个代理或源服务器的响应时超时。</p>
+<h2 id="HttpVersionNotSupported-505"><a href="#HttpVersionNotSupported-505" class="headerlink" title="HttpVersionNotSupported = 505"></a>HttpVersionNotSupported = 505</h2><p>等效于HTTP状态505.<br><code>System.Net.HttpStatusCode.HttpVersionNotSupported</code>指示服务器不支持所请求的<code>HTTP</code>版本。</p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/20190106/EasyHTTP-Get/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    EasyHTTP - Get
+                
+            </div>
+        </a>
+    
+    
+        <a href="/20190106/EasyHTTP-Response/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">EasyHTTP - Response</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+        <section id="comments">  
+  <section id="comments">
+  
+<div id="SOHUCS" sid="EasyHTTP - Httpstatuscode"></div>  
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+  window.changyan.api.config({
+    appid: 'cytV9us47',
+    conf: 'prod_da5c9bb37dfe87fb1e4b37c366dfbc54'
+  });
+</script>
+
+  </section> </section>
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Greendev &copy; 2019 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            
+
+                 &nbsp;|&nbsp;<a id="beian" href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16096155号-3</a>
+            
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

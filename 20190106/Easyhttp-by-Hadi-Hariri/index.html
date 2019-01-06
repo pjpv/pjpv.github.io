@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>Easyhttp by Hadi Hariri | Blog</title>
+    
+    
+        <meta name="keywords" content="C#,EasyHTTP,reprint">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="最近，我编写的大部分代码都以某种方式与HTTP服务器进行通信。 无论是“ReSTful”服务还是“Wanna-be-ReSTful”服务，我都需要进行GET，POST，PUT等操作并与JSON配合。 在几次围绕WebRequest进行简单封装之后，我决定是时候将其正式化。于是就有了EasyHttp。它已经在GitHub上待了很长一段时间，我和其他人一直在将它用于几个项目，所以我认为它已经到了让更多">
+<meta name="keywords" content="C#,EasyHTTP,reprint">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Easyhttp by Hadi Hariri">
+<meta property="og:url" content="https://dxx.fun/20190106/Easyhttp-by-Hadi-Hariri/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="最近，我编写的大部分代码都以某种方式与HTTP服务器进行通信。 无论是“ReSTful”服务还是“Wanna-be-ReSTful”服务，我都需要进行GET，POST，PUT等操作并与JSON配合。 在几次围绕WebRequest进行简单封装之后，我决定是时候将其正式化。于是就有了EasyHttp。它已经在GitHub上待了很长一段时间，我和其他人一直在将它用于几个项目，所以我认为它已经到了让更多">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-06T10:32:29.324Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Easyhttp by Hadi Hariri">
+<meta name="twitter:description" content="最近，我编写的大部分代码都以某种方式与HTTP服务器进行通信。 无论是“ReSTful”服务还是“Wanna-be-ReSTful”服务，我都需要进行GET，POST，PUT等操作并与JSON配合。 在几次围绕WebRequest进行简单封装之后，我决定是时候将其正式化。于是就有了EasyHttp。它已经在GitHub上待了很长一段时间，我和其他人一直在将它用于几个项目，所以我认为它已经到了让更多">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                
+                <span class="site-title">Blog</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives/">归档</a>
+                
+                    <a class="main-nav-link" href="/categories/">分类</a>
+                
+                    <a class="main-nav-link" href="/about/">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives/">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories/">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/about/">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>分类</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            C#
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            EasyHTTP
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Documentation
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20190106/EasyHTTP-Delete/">EasyHTTP - Delete</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Get/">EasyHTTP - Get</a></li>  <li class="file"><a href="/20190106/EasyHTTP-GetFile/">EasyHTTP - GetFile</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Head/">EasyHTTP - Head</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Home/">EasyHTTP - Home</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Httpclient/">EasyHTTP - Httpclient</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Post/">EasyHTTP - Post</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Put/">EasyHTTP - Put</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Putfile/">EasyHTTP - PutFile</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Request/">EasyHTTP - Request</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Response/">EasyHTTP - Response</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Streamresponse/">EasyHTTP - Streamresponse</a></li>  <li class="file"><a href="/20190106/EasyHTTP-Httpstatuscode/">EasyHTTP - Httpstatuscode</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            reprint
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20190106/Easy-HTTP–not-Just-a-Catchy-Name/">Easy HTTP–not Just a Catchy Name</a></li>  <li class="file active"><a href="/20190106/Easyhttp-by-Hadi-Hariri/">Easyhttp by Hadi Hariri</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Django
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/Django-2-0-静态文件404解决方法/">Django 2.0 静态文件404解决方法</a></li>  <li class="file"><a href="/20181102/Django2-0-配置静态文件路由，验证网站所有权/">Django2.0 配置静态文件路由，验证网站所有权</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            PHP
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            基础
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181114/PHP-基础-常量及数据类型/">PHP - 基础 - 常量及数据类型</a></li>  <li class="file"><a href="/20181114/PHP-基础-引用变量/">PHP - 基础 - 引用变量</a></li>  <li class="file"><a href="/20181114/PHP-基础-流程控制/">PHP - 基础 - 流程控制</a></li>  <li class="file"><a href="/20181114/PHP-基础-运算符/">PHP - 基础 - 运算符</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Python
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/Python-基础-数据类型-字符串类型与操作/">Python 基础 - 数据类型 - 字符串类型与操作</a></li>  <li class="file"><a href="/20181102/python虚拟环境-Virtualenv及Virtualenvwrapper/">python虚拟环境 Virtualenv及Virtualenvwrapper</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Ubuntu
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/ubuntu-16-04-python-3-x-安装OpenSSL/">ubuntu 16.04 python 3.x 安装OpenSSL</a></li>  <li class="file"><a href="/20181102/ubuntu-16-04-配置Rime输入法（中州韵）/">ubuntu 16.04 配置Rime输入法（中州韵）</a></li>  <li class="file"><a href="/20181102/ubuntu安装node-vue/">ubuntu安装node vue</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            前端
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20181102/CSS选择器-匹配H标签/">CSS选择器 匹配H标签</a></li>  <li class="file"><a href="/20181102/hexo-admin-deploy/">hexo-admin deploy</a></li>  <li class="file"><a href="/20181102/pm2/">pm2</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/20181102/hello-world/">Hello World</a></li>  <li class="file"><a href="/20190104/Win7-重装日志/">Win7 重装日志 软件</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>归档</span></h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">15</span></li></ul>
+        </div>
+    </div>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-Easyhttp-by-Hadi-Hariri" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/C/">C#</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/C/EasyHTTP/">EasyHTTP</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/C/EasyHTTP/reprint/">reprint</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/C/">C#</a>, <a class="tag-link" href="/tags/EasyHTTP/">EasyHTTP</a>, <a class="tag-link" href="/tags/reprint/">reprint</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/20190106/Easyhttp-by-Hadi-Hariri/">
+            <time datetime="2019-01-06T08:44:00.000Z" itemprop="datePublished">2019-01-06</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Easyhttp by Hadi Hariri
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p>最近，我编写的大部分代码都以某种方式与HTTP服务器进行通信。 无论是“ReSTful”服务还是“Wanna-be-ReSTful”服务，我都需要进行GET，POST，PUT等操作并与JSON配合。</p>
+<p>在几次围绕<strong>WebRequest</strong>进行简单封装之后，我决定是时候将其正式化。<br>于是就有了<strong>EasyHttp</strong>。<br>它已经在<a href="http://github.com/hhariri/EasyHttp" target="_blank" rel="noopener">GitHub</a>上待了很长一段时间，我和其他人一直在将它用于几个项目，所以我认为它已经到了让更多人尝试的时候了，如果他们愿意的话。</p>
+<p>描述<strong>EasyHttp</strong>功能的最佳方法就是代码</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="keyword">new</span> HttpClient</span><br><span class="line">&#123;</span><br><span class="line">    Request = &#123; Accept = HttpContentTypes.ApplicationJson &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> response = http.Get(<span class="string">"http://domain.com/customer/25"</span>);</span><br><span class="line"><span class="keyword">var</span> customer = response.StaticBody&lt;Customer&gt;();</span><br></pre></td></tr></table></figure>
+<p>代码描述：我们创建了一个<strong>HttpClient</strong>实例，并指示我们接受内容类型<code>application/json</code>（因为在这种情况下，服务器返回给我们的是json）。 通过指定此<code>Accept</code>头，<strong>EasyHttp</strong>知道如何解码请求（<code>request</code>）。</p>
+<p>我们如何得到响应(<code>response</code>)？<br>在上面的代码中，我们使用<strong>StaticBody</strong>方法，它为我们提供了一个强类型客户(strongly-typed Customer)。 但我们还有其他选择：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="keyword">new</span> HttpClient</span><br><span class="line">&#123;</span><br><span class="line">    Request = &#123; Accept = HttpContentTypes.ApplicationJson &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> response = http.Get(<span class="string">"http://domain.com/customer/25"</span>);</span><br><span class="line"><span class="keyword">dynamic</span> customer = response.DynamicBody();</span><br><span class="line">Console.WriteLine(customer.Name);</span><br><span class="line">Console.WriteLine(customer.Email);</span><br></pre></td></tr></table></figure>
+<p>在这种情况下，我们想要返回一个动态类型，因此我们调用<strong>DynamicBody</strong>方法。<br><strong>EasyHttp</strong>将自动反序列化对动态对象的响应。<br>这允许我们访问属性而不必提前声明类型（在使用JSON时非常有用）。<br>最后，我们还可以通过<strong>RawText</strong>属性访问原始响应。</p>
+<p>如果我们想要数据流(<code>stream</code>)传输到文件，我们只需：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="keyword">new</span> HttpClient();</span><br><span class="line">http.GetAsFile(<span class="string">"http://hadihariri.com/header.png"</span>, <span class="string">@"C:\Temp\header.png"</span>);</span><br></pre></td></tr></table></figure>
+<p>使用其他方法(<code>Http verbs</code>)几乎是相同的过程。<br>假设我们想要创建一个调用服务的客户端：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="keyword">new</span> HttpClient();</span><br><span class="line"><span class="keyword">var</span> customer = <span class="keyword">new</span> Customer()</span><br><span class="line">&#123;</span><br><span class="line">    Name = <span class="string">"Joe Smith"</span>,</span><br><span class="line">    Email = <span class="string">"Joe@Gmail.com"</span></span><br><span class="line">&#125;;</span><br><span class="line">http.Post(<span class="string">"http://domain.com/customer"</span>, customer, HttpContentTypes.ApplicationJson);</span><br></pre></td></tr></table></figure>
+<p>在这种情况下，我们提交了一个<strong>Customer</strong>对象，并要求<strong>EasyHttp</strong>使用<code>application/json</code>对其进行编码。<br>与接收响应时类似，在发出需求正文的请求时，我们也可以使用动态对象。<br>因此，这也可以使用：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="keyword">new</span> HttpClient()</span><br><span class="line"><span class="keyword">dynamic</span> customer = <span class="keyword">new</span> ExpandoObject()</span><br><span class="line">customer.Name = <span class="string">"Joe Smith"</span>;</span><br><span class="line">customer.Email = <span class="string">"Joe@Gmail.com"</span>;</span><br><span class="line">http.Post(<span class="string">"http://domain.com/customer"</span>, customer, HttpContentTypes.ApplicationJson);</span><br></pre></td></tr></table></figure>
+<p>在内部，<strong>EasyHttp</strong>正在使用优秀的<strong>JsonFX</strong>，它目前支持JSON和XML 编码和解码。<br><strong>EasyHttp</strong>通过添加<code>www-form-urlencoded</code>的编码支持来扩展它。<br>用其他格式扩展它应该很容易。</p>
+<p>除了<strong>GET</strong>和<strong>POST</strong>，<strong>EasyHttp</strong>还支持<strong>PUT</strong>，<strong>DELETE</strong>和<strong>HEAD</strong>。<br>请求和响应标头作为属性显示，因此我们不必手动添加标头，而是可以单独分配它们（其中一些标记来自现有的<code>WebRequest</code>）。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这就是它的全部内容。 正如我所提到的，我一直在使用它与CouchDB交互，作为<a href="http://github.com/hhariri/YouTrackSharp" target="_blank" rel="noopener">YouTrackSharp</a>和其他一些项目的一部分。<br>它远不是全部功能，但是我添加的东西，因为我或部分人需要使用它们。</p>
+<p>随意下载并使用它。<br>源代码在<a href="http://github.com/hhariri/EasyHttp" target="_blank" rel="noopener">GitHub</a>上，Issue Tracker在<a href="http://youtrack.codebetter.com/issues/EHTTP" target="_blank" rel="noopener">CodeBetter</a>上。<br>如果您对运行测试感兴趣，则需要CouchDB。<br>我最初写这篇文章是因为我需要为CouchDB做一些事情，它是测试不同Http Verbs的一个很好的平台（是的，它们是集成测试，而不是单元测试）。</p>
+<ul>
+<li><a href="https://hadihariri.com/2011/01/16/easyhttp/" target="_blank" rel="noopener">by Hadi Hariri</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/20190106/Easy-HTTP–not-Just-a-Catchy-Name/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    Easy HTTP–not Just a Catchy Name
+                
+            </div>
+        </a>
+    
+    
+        <a href="/20190106/EasyHTTP-Home/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">EasyHTTP - Home</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+        <section id="comments">  
+  <section id="comments">
+  
+<div id="SOHUCS" sid="Easyhttp by Hadi Hariri"></div>  
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+  window.changyan.api.config({
+    appid: 'cytV9us47',
+    conf: 'prod_da5c9bb37dfe87fb1e4b37c366dfbc54'
+  });
+</script>
+
+  </section> </section>
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Greendev &copy; 2019 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            
+
+                 &nbsp;|&nbsp;<a id="beian" href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16096155号-3</a>
+            
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
