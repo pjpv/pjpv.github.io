@@ -9,18 +9,18 @@
         <meta name="keywords" content="C#,EasyHTTP,Get">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="根据W3，Get方法执行以下操作。  GET方法意味着检索由Request-URI标识的任何信息（以实体的形式）。 如果Request-URI引用数据生成过程，则生成的数据应作为响应中的实体而不是过程的源文本返回，除非该文本恰好是过程的输出。  有几种方法可以使用Easyhttp获取。 在下面的所有示例中，我们假设在另一侧有一个服务，它返回带有Id属性和Genus属性的类型树的对象。 url /t">
+    <meta name="description" content="根据W3，Get方法执行以下操作。  GET方法意味着检索由Request-URI标识的任何信息（以实体的形式）。 如果Request-URI引用数据生成过程，则生成的数据应作为响应中的实体而不是过程的源文本返回，除非该文本恰好是过程的输出。  有几种方法可以使用Easyhttp获取。 在下面的所有示例中，我们假设在另一侧有一个服务，它返回带有Id属性和Genus属性的Tree的对象。 url /">
 <meta name="keywords" content="C#,EasyHTTP,Get">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EasyHTTP - Get">
 <meta property="og:url" content="https://zfdev.com/20190106/EasyHTTP-Get/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="根据W3，Get方法执行以下操作。  GET方法意味着检索由Request-URI标识的任何信息（以实体的形式）。 如果Request-URI引用数据生成过程，则生成的数据应作为响应中的实体而不是过程的源文本返回，除非该文本恰好是过程的输出。  有几种方法可以使用Easyhttp获取。 在下面的所有示例中，我们假设在另一侧有一个服务，它返回带有Id属性和Genus属性的类型树的对象。 url /t">
+<meta property="og:description" content="根据W3，Get方法执行以下操作。  GET方法意味着检索由Request-URI标识的任何信息（以实体的形式）。 如果Request-URI引用数据生成过程，则生成的数据应作为响应中的实体而不是过程的源文本返回，除非该文本恰好是过程的输出。  有几种方法可以使用Easyhttp获取。 在下面的所有示例中，我们假设在另一侧有一个服务，它返回带有Id属性和Genus属性的Tree的对象。 url /">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-06T08:42:47.236Z">
+<meta property="og:updated_time" content="2019-01-06T16:35:25.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="EasyHTTP - Get">
-<meta name="twitter:description" content="根据W3，Get方法执行以下操作。  GET方法意味着检索由Request-URI标识的任何信息（以实体的形式）。 如果Request-URI引用数据生成过程，则生成的数据应作为响应中的实体而不是过程的源文本返回，除非该文本恰好是过程的输出。  有几种方法可以使用Easyhttp获取。 在下面的所有示例中，我们假设在另一侧有一个服务，它返回带有Id属性和Genus属性的类型树的对象。 url /t">
+<meta name="twitter:description" content="根据W3，Get方法执行以下操作。  GET方法意味着检索由Request-URI标识的任何信息（以实体的形式）。 如果Request-URI引用数据生成过程，则生成的数据应作为响应中的实体而不是过程的源文本返回，除非该文本恰好是过程的输出。  有几种方法可以使用Easyhttp获取。 在下面的所有示例中，我们假设在另一侧有一个服务，它返回带有Id属性和Genus属性的Tree的对象。 url /">
     
 
     
@@ -385,8 +385,8 @@
 <blockquote>
 <p>GET方法意味着检索由Request-URI标识的任何信息（以实体的形式）。 如果Request-URI引用数据生成过程，则生成的数据应作为响应中的实体而不是过程的源文本返回，除非该文本恰好是过程的输出。</p>
 </blockquote>
-<p>有几种方法可以使用Easyhttp获取。 在下面的所有示例中，我们假设在另一侧有一个服务，它返回带有Id属性和Genus属性的类型树的对象。</p>
-<p>url <code>/trees?Id=1</code> 将为我们提供一个单独的树对象，我们可以这样做。</p>
+<p>有几种方法可以使用Easyhttp获取。 在下面的所有示例中，我们假设在另一侧有一个服务，它返回带有Id属性和Genus属性的<code>Tree</code>的对象。</p>
+<p>url <code>/trees?Id=1</code> 将为我们提供一个单独的<code>Tree</code>对象，我们可以这样做。</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="keyword">new</span> HttpClient();</span><br><span class="line">http.Request.Accept = HttpContentTypes.ApplicationJson;</span><br><span class="line"><span class="keyword">var</span> result = http.Get(<span class="string">"http://localhost/trees?Id=1"</span>);</span><br><span class="line"><span class="keyword">var</span> tree = result.DynamicBody;</span><br><span class="line">Console.WriteLine(tree.Id);</span><br><span class="line">Console.WriteLine(tree.Genus);</span><br></pre></td></tr></table></figure>
 <p>或者我们可以使用这样的匿名对象。</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="keyword">new</span> HttpClient();</span><br><span class="line">http.Request.Accept = HttpContentTypes.ApplicationJson;</span><br><span class="line"><span class="keyword">var</span> result = http.Get(<span class="string">"http://localhost/trees"</span>, <span class="keyword">new</span> &#123;Id = <span class="number">1</span>&#125; );</span><br><span class="line"><span class="keyword">var</span> tree = result.DynamicBody;</span><br><span class="line">Console.WriteLine(tree.Id);</span><br><span class="line">Console.WriteLine(tree.Genus);</span><br></pre></td></tr></table></figure>

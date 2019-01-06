@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zfdev.com/20190106/EasyHTTP-Get/</loc>
+    
+    <lastmod>2019-01-06T16:35:25.923Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zfdev.com/20190106/EasyHTTP-Post/</loc>
+    
+    <lastmod>2019-01-06T16:34:04.873Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zfdev.com/20190104/Win7-%E9%87%8D%E8%A3%85%E6%97%A5%E5%BF%97/</loc>
     
     <lastmod>2019-01-06T10:38:00.123Z</lastmod>
@@ -37,13 +51,6 @@
   </url>
   
   <url>
-    <loc>https://zfdev.com/20190106/EasyHTTP-Get/</loc>
-    
-    <lastmod>2019-01-06T08:42:47.236Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zfdev.com/20190106/EasyHTTP-Httpstatuscode/</loc>
     
     <lastmod>2019-01-06T08:42:38.260Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>https://zfdev.com/20190106/EasyHTTP-Streamresponse/</loc>
     
     <lastmod>2019-01-06T08:41:41.299Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zfdev.com/20190106/EasyHTTP-Post/</loc>
-    
-    <lastmod>2019-01-06T08:41:30.731Z</lastmod>
     
   </url>
   
