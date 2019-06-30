@@ -265,7 +265,7 @@
                             &nbsp;
                             基础
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20190630/温故而知新-1/">温故而知新-1</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/20190630/温故而知新-1/">温故而知新-1</a></li>  <li class="file"><a href="/20190630/温故而知新-2/">温故而知新-2：对象与继承</a></li>  </ul> 
                     </li> 
                      <li class="file"><a href="/20181102/CSS选择器-匹配H标签/">CSS选择器 匹配H标签</a></li>  <li class="file"><a href="/20181102/hexo-admin-deploy/">hexo-admin deploy</a></li>  <li class="file"><a href="/20181102/pm2/">pm2</a></li>  </ul> 
                     </li> 
@@ -341,7 +341,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title"><span>归档</span></h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">14</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">14</span></li></ul>
         </div>
     </div>
 
@@ -350,6 +350,97 @@
 </aside>
             
             <section id="main">
+        <article id="post-Django-2-0-静态文件404解决方法" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Django/">Django</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Django/">Django</a>, <a class="tag-link" href="/tags/Python/">Python</a>, <a class="tag-link" href="/tags/静态文件/">静态文件</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/20181102/Django-2-0-静态文件404解决方法/">
+            <time datetime="2018-11-02T11:27:00.000Z" itemprop="datePublished">2018-11-02</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/20181102/Django-2-0-静态文件404解决方法/">Django 2.0 静态文件404解决方法</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><blockquote>
+<p>Django 在 Debug=True 时, 不需要配置. Django会在App中需找STATIC路径.<br>因为服务器一直用Nginx配置STATIC路径, 所以一直没有配置开发环境的STATIC路径,<br>但需要测试生产环境还是不方便, 所以设置一下Django中的STATIC路由.</p>
+</blockquote>
+</p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="project-urls-py"><a href="#project-urls-py" class="headerlink" title="project/urls.py"></a>project/urls.py</h4><pre><code>from django.views.static import serve
+
+<p>
+                
+            
+        
+        
+            </p></code></pre></div>   
+            <div class="article-more-link">
+                <a href="/20181102/Django-2-0-静态文件404解决方法/#more">查看更多</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-python虚拟环境-Virtualenv及Virtualenvwrapper" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
